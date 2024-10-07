@@ -1,0 +1,165 @@
+<?php 
+  session_start();
+  if (isset($_SESSION['username1']))
+   {
+    header('Location: /hrs/client_page.php');
+  }
+ ?>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>PHIL OASIS | Account</title>
+  <link rel="shortcut icon" href="images/favicon.png">
+  <script src = "js/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+ <link rel="stylesheet" href="css/style.css"> 
+ <script src = "js/bootstrap.min.js"></script> 
+</head>
+<style type="text/css">
+  #logo
+  {
+  height:45px;
+  width:120px;
+  left: 7px;
+  top: 3px;
+  position: absolute;
+  }
+</style>
+
+<body>
+  <nav class=" navbar-default navbar-inverse navbar-fixed-top" style="background-color: black;" >
+  <img src="images/peacockz.png" id="logo">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-target="#mainNavbar" data-toggle="collapse">
+        <span class=icon-bar></span>
+        <span class=icon-bar></span>
+        <span class=icon-bar></span>
+      </button>
+    </div>
+      <div class="navbar-collapse collapse" id="mainNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="home.php" class="nav-text"></span> HOME</li></a>
+          <li><a href="/hrs/home.php#about.us" class="nav-text"></span> ABOUT</li></a>
+          <li><a href="/hrs/home.php#contact.us" class="nav-text"></span> CONTACT US</li></a>
+          
+          <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <font face="century gothic" class="nav-text"></span> GALLERY&nbsp;&nbsp;</font>
+                 <span class="caret "></span></a>
+                     <ul class="dropdown-menu">
+                      <li><a href="/hrs/home.php#gallery" class="nav-text"></span> POOL</a></li>
+                      <li><a href="/hrs/home.php#bedrooms" class="nav-text"></span> BED ROOMS</a></li>
+                      <li><a href="/hrs/home.php#facilities" class="nav-text"></span> FACILITIES</a></li> 
+                     </ul>
+                     
+           <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <font face="century gothic" class="nav-text"></span> ACCOUNT&nbsp;&nbsp;</font>
+                 <span class="caret "></span></a>
+                     <ul class="dropdown-menu">
+                      <li><a href="signin_signup.php" class="nav-text" style="color"><span class="fa fa-sign-in"> <font face="century gothic">&nbsp;&nbsp;&nbsp;SIGN IN</font></a></li> 
+                      <li><a href="signin_signup.php" class="nav-text"><span class="fa fa-user-plus"><font face="century gothic">&nbsp;&nbsp;&nbsp;SIGN UP</font></a></li>                      
+                        
+                     </ul>           
+
+                      </font>
+          </div>
+  </div>
+  </nav>  
+  <img src="images/2.jpg" id="bg">
+  <div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#login">Sign in</a></li>
+        <li class="tab"><a href="#signup">Sign Up</a></li>
+      </ul>
+      
+      <div class="tab-content">
+       
+        
+        <div id="login">   
+          <h1 style="font-size: 25px">Welcome to Phil Oasis Hotel and Restaurant!</h1>
+          
+          <form action="client_login_db.php" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address
+            </label>
+            <input type="email" name="user_login1"  autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password
+            </label>
+            <input type="password" name="password_login1" autocomplete="off"/>
+          </div>
+          
+          <!-- <p class="forgot"><a href="#">Forgot Password?</a></p> -->
+          
+          <button class="button button-block" name="login" >Log In</button><br>
+         <center> <font face="Open Source">
+          <p style="font-size:20px; color: #1AB186;"><?php 
+        if (isset($_GET['msg'])) 
+        {
+          echo $_GET['msg'];
+        }
+
+         ?>   
+         </p></font></center>
+          
+          </form>
+
+        </div>
+         <div id="signup">   
+          <h1 style="font-size: 25px">Sign Up for Free</h1>
+          
+          <form action="client_create_db.php" method="post">
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name
+              </label>
+              <input type="text" name="full_name2" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Last Name
+              </label>
+              <input type="text" name="username2" required autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Email Address
+            </label>
+            <input type="email" name="email2" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password
+            </label>
+            <input type="password" name="password2" required autocomplete="off"/>
+          </div>
+          
+          <button type="submit" class="button button-block"/>Create Account</button>
+          
+          </form>
+
+        </div>
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
