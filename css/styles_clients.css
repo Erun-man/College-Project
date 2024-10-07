@@ -1,0 +1,141 @@
+body{
+  background:#f4f4f4;
+  overflow-x: hidden;
+
+}
+
+/* Navbar */
+.navbar{
+  min-height: 10px !important;
+  margin-bottom:0;
+  border-radius:0;
+  background-color: #1AB186;
+  border: 1px solid #1AB186;
+
+}
+
+.navbar-default .navbar-toggle {
+  border-color: white;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #c0392b;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: ;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #24303C;
+}
+
+/* Custom */
+.main-color-bg{
+  background-color: #24303C   !important;
+  border-color: #24303C !important;
+  color:#ffffff !important;
+}
+
+/* Header */
+#header{
+  background:#24303C;
+  color:#ffffff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+#header .create{
+  padding-top: 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb{
+  background:#cccccc;
+  color:#333333;
+}
+
+.breadcrumb a{
+  color:#333333;
+}
+
+/* Progress Bars */
+.progress-bar{
+  background:#333333;
+  color:#ffffff;
+}
+
+.dash-box{
+  text-align:center;
+}
+
+#login{
+  margin-top:30px;
+}
+
+/* Footer */
+#footer{
+  background:#24303C;
+  color:#ffffff;
+  text-align:center;
+  padding:30px;
+  margin-top:30px;
+}
+
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffbbbc;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffbbbc;
+    background-color: #c0392b;
+  }
+}
+
+
+/*this css style is for data recors of client*/
+
+/*table {
+    border-collapse: collapse;
+    width: 1120px;  
+    margin-top: 100px;
+    border: 1px solid #4CAF50;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+td
+{
+    text-align: center;
+}
+*/
+th
+{
+  text-align: center;
+}
+td
+{
+  text-align: center;
+}
